@@ -49,13 +49,12 @@
     <input type="checkbox" name="hobbies" value="otros">Otros
     <br>
     <h3>Datos de usuario</h3>
-    Nombre: <br><input type="text" name="nombre"><br>
+    Nombre de Usuario: <br><input type="text" name="nombre"><br>
     Contraseña:<br> <input type="password" name="pass"><br>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" onclick="return validacion">
     <input type="reset" value="Borrar">
 </form>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
-        type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 </body>
 </html>
