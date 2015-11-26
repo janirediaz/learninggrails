@@ -6,7 +6,6 @@ function validacion() {
         alert("El nombre introducido no es válido, introducelo de nuevo y vuelve a intentarlo");
         return false;
     }
-    alert("hola");
 
     valor = $("#apellido").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
@@ -14,14 +13,14 @@ function validacion() {
         return false;
     }
 
-    valor = $("#telefono").value;
+    valor = $("#telefono").val();
     if( isNaN(valor) || valor == null || valor.length == 0 ) {
         alert("El telefono introducido no es valido");
         return false;
     }
 
 
-    valor = $("#correo").value;
+    valor = $("#correo").val();
     if (/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/.test(valor)){
         alert("La dirección de email es incorrecta");
         return false;

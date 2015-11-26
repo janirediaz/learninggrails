@@ -15,34 +15,56 @@
         <label for="apellido">Apellido</label>
         <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Apellido">
     </div>
-    Número de Teléfono:<br><input type="tel" name="telefono" id="telefono"><br>
-    Correo electrónico:<br><input type="text" name="correo" id="correo"><br>
-    Dirección:<br> <input type="text" name="dirección" id="direccion"><br>
-    Ciudad:<br><input type ="text" name="ciudad" id= "ciudad"><br>
-    Código postal:<br><input type ="text" name="código" id="codigo"><br>
-    Provincia:<br>
-    <select name="Provincia" id="provincia" >
-        <option value="">- Selecciona una provincia -</option>
-        <option value="alava">Alava</option>
-        <option value="guipuzkoa">Gipuzkoa</option>
-        <option value="bizkaia">Bizkaia</option>
-        <option value="asturias">Asturias</option>
-        <option value="murcia">Murcia</option>
-        <option value="avila">Avila</option>
-        <option value="burgos">Burgos</option>
-    </select><br>
-    Estado civil:<br>
-    <select name="Estado civil" id="estado">
-        <option value="">-Selecciona un estado -</option>
-        <option value="soltero">Soltero</option>
-        <option value="casado">Casado</option>
-        <option value="divorciado">Divorciado</option>
-        <option value="otro">Otro</option>
-    </select><br>
-    Sexo:<br>
-    Hombre <input type="radio" name="sexo" value="H" id="sexo">
-    Mujer  <input type="radio" name="sexo" value="M" id="sexo">
-    <br>
+    <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="tel" name="telefono" class="form-control" id="telefono" placeholder="Telefono">
+    </div>
+    <div class="form-group">
+        <label for="correo">Correo Eléctronico</label>
+        <input type="text" name="correo" class="form-control" id="correo" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Direccion">
+    </div>
+    <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" name="ciudad" class="form-control" id="ciudad" placeholder="Ciudad">
+    </div>
+    <div class="form-group">
+        <label for="codigo">Código Postal</label>
+        <input type="text" name="codigo" class="form-control" id="codigo" placeholder="Codigo">
+    </div>  
+    <div>  
+        <label for="provincia">Provincia</label>
+        <select class="form-control" name="Provincia" id="provincia" >
+            <option value="">- Selecciona una provincia -</option>
+            <option value="alava">Alava</option>
+            <option value="guipuzkoa">Gipuzkoa</option>
+            <option value="bizkaia">Bizkaia</option>
+            <option value="asturias">Asturias</option>
+            <option value="murcia">Murcia</option>
+            <option value="avila">Avila</option>
+            <option value="burgos">Burgos</option>
+        </select>
+    </div>
+    <div>
+        <label for="estado">Estado Civil</label>
+        <select class="form-control"name="Estado civil" id="estado">
+            <option value="">-Selecciona un estado -</option>
+            <option value="soltero">Soltero</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="otro">Otro</option>
+        </select>
+    </div>
+   <div>
+        <label class="radio-inline">Sexo
+            <input type="radio" name="sexo" id="sexo" value="Hombre">Hombre
+            <input type="radio" name="sexo" id="sexo" value="Mujer">Mujer
+        </label>
+    </div>
+   
     ¿Edad?:<br>
     <input type="radio" name="edad" value="menor" id="menor">menor de 18
     <input type="radio" name="edad" value="adulto" id="adulto">entre 19 y 60
