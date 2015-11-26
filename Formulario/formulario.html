@@ -7,9 +7,10 @@
 <h3>Formulario de registro</h3>
 
 <form>
-    <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre">
+    <div class="form-group has success">
+        <label class="control-label" for="nombre">Nombre</label>
+        <input type="text" class="help-block" name="nombre" class="form-control" id="nombre" placeholder="Nombre" aria-describedly="helpBlock">
+
     </div>
     <div class="form-group">
         <label for="apellido">Apellido</label>
@@ -59,26 +60,51 @@
         </select>
     </div>
    <div>
-        <label class="radio-inline">Sexo
-            <input type="radio" name="sexo" id="sexo" value="Hombre">Hombre
+        <label>Sexo</label>
+        <label class="radio-inline">
+            <input type="radio" name="sexo" id="sexo" value="Hombre">Hombre   
+        </label>
+        <label class="radio-inline">
             <input type="radio" name="sexo" id="sexo" value="Mujer">Mujer
         </label>
     </div>
    
-    ¿Edad?:<br>
-    <input type="radio" name="edad" value="menor" id="menor">menor de 18
-    <input type="radio" name="edad" value="adulto" id="adulto">entre 19 y 60
-    <input type="radio" name="edad" value="mayor" id="mayor">mayor de 61
-    <br>
-    ¿Hobbies?:<br>
-    <input type="checkbox" name="hobbies" value="cine" id="cine">Cine
-    <input type="checkbox" name="hobbies" value="libros" id="libros">Libros
-    <input type="checkbox" name="hobbies" value="musica" id="musica">Música
-    <input type="checkbox" name="hobbies" value="viajes" id="viajes">Viajes
-    <input type="checkbox" name="hobbies" value="otros" id="otros">Otros
-    <br>
+    <div>
+        <label>Edad</label>
+        <label class="radio-inline">
+            <input type="radio" name="edad" value="menor" id="menor">menor de 18
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="edad" value="adulto" id="adulto">entre 19 y 60
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="edad" value="mayor" id="mayor">mayor de 61
+        </label>
+    </div>
+    
+    <div>
+        <label>Hobbies</label>
+        <label class="checkbox-inline">
+            <input type="checkbox" name="hobbies" value="cine" id="cine">Cine
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" name="hobbies" value="libros" id="libros">Libros
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" name="hobbies" value="musica" id="musica">Música
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" name="hobbies" value="viajes" id="viajes">Viajes
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" name="hobbies" value="otros" id="otros">Otros
+        </label>
+    </div>
     <h3>Datos de usuario</h3>
-    Nombre de Usuario: <br><input type="text" name="nombre" id="nombre"><br>
+   <div class="form-group">
+        <label for="user">Nombre de Usuario</label>
+        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario">
+    </div>
     Contraseña:<br> <input type="password" name="pass" id="pass"><br>
     <input type="submit" value="Enviar" onclick="return validacion()">
     <input type="reset" value="Borrar">

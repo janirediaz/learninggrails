@@ -14,22 +14,48 @@ function validacion() {
     }
 
     valor = $("#telefono").val();
-    if( isNaN(valor) || valor == null || valor.length == 0 ) {
+    if( isNaN(valor) || valor == null || valor.length == 0 || valor.length < 9 ) {
         alert("El telefono introducido no es valido");
         return false;
     }
 
 
     valor = $("#correo").val();
-    if (/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/.test(valor)){
-        alert("La dirección de email es incorrecta");
-        return false;
+    if($("#correo").val().indexOf('@', 0) == -1 || $("#correo").val().indexOf('.', 0) == -1) {
+            alert("El correo electrónico introducido no es correcto");
+            return false;
+    }
+
+    valor = $("direccion").val();
+    if($("#direccion").val().length < 1) {  
+            alert("La direccion es obligatoria, por favor introducela e intentalo de nuevo");  
+            return false; 
     }
 
 
+    valor = $("#ciudad").val();
+    if($("#ciudad").val().length < 1) {  
+            alert("La localidad es obligatoria");  
+            return false; 
+    }
+
+    valor = $("#codigo").val();
+    if($("#codigo").val().length < 5) {  
+            alert("El codigo postal debe tener 5 digitos");  
+            return false;  
+        }  
+
+
     indice = $("#provincia").selectedIndex;
-    if( indice == null || indice == 0 ) {
-        return false;
+    if($("#provincia option:selected").val() == "") {  
+            alert("La provincia es obligatoria");  
+            return false;
+    }
+
+    indice = $("#estado").selectedIndex;
+    if($("#estado option:selected").val() == "") {  
+            alert("Por favor selecciona un estado");  
+            return false;
     }
    
     
