@@ -6,8 +6,8 @@
 <body>
 <h3>Formulario de registro</h3>
 
-<form>
-    <div class="form-group has success">
+<form id="formulario" method="post" action="javascript:void(0)">
+    <div class="form-group">
         <label class="control-label" for="nombre">Nombre</label>
         <input type="text" class="help-block" name="nombre" class="form-control" id="nombre" placeholder="Nombre" aria-describedly="helpBlock">
 
@@ -105,9 +105,12 @@
         <label for="user">Nombre de Usuario</label>
         <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario">
     </div>
-    Contraseña:<br> <input type="password" name="pass" id="pass"><br>
-    <input type="submit" value="Enviar" onclick="return validacion()">
-    <input type="reset" value="Borrar">
+    <div class="form-group">
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" id="pass">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </div>
 </form>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  crossorigin="anonymous">

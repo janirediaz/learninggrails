@@ -1,11 +1,20 @@
 function validacion() {
+
+    $(document).ready(function(){
+    $("#formulario").submit return validacion());
+    
     
 
     valor = $("#nombre").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
+        $("#nombre").addClass("form-group has-success");
+    }else{
+        $("#nombre").removeClass("form-group has-success").addClass("form-group has-error");
         alert("El nombre introducido no es válido, introducelo de nuevo y vuelve a intentarlo");
         return false;
     }
+        
+    
 
     valor = $("#apellido").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
@@ -57,8 +66,6 @@ function validacion() {
             alert("Por favor selecciona un estado");  
             return false;
     }
-   
-    
-
+}   
     
 }
