@@ -1,16 +1,16 @@
-function validacion() {
+$(document).ready(function(){
+    $("#formulario").submit(function(){
+        return validacion();
+    });
+});  
 
-    $(document).ready(function(){
-    $("#formulario").submit(validacion());
-    
-    
+function validacion() {
 
     valor = $("#nombre").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
-        $("#nombre").addClass("form-group has-success");
+        $("#divNombre").removeClass().addClass("form-group has-error");
     }else{
-        $("#nombre").removeClass("form-group has-success control-label form-control help-block").addClass("form-group has-error");
-        alert("El nombre introducido no es válido, introducelo de nuevo y vuelve a intentarlo");
+        $("#divNombre").removeClass().addClass("form-group has-success");
         return false;
     }
         
@@ -18,20 +18,26 @@ function validacion() {
 
     valor = $("#apellido").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
-        alert("Los apellidos introducidos no son válidos, introducelos de nuevo y vuelve a intentarlo");
+        $("#divApellido").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divApellido").removeClass().addClass("form-group has-success");
         return false;
     }
 
     valor = $("#telefono").val();
     if( isNaN(valor) || valor == null || valor.length == 0 || valor.length < 9 ) {
-        alert("El telefono introducido no es valido");
+        $("#divTelefono").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divTelefono").removeClass().addClass("form-group has-success");
         return false;
     }
 
 
     valor = $("#correo").val();
     if($("#correo").val().indexOf('@', 0) == -1 || $("#correo").val().indexOf('.', 0) == -1) {
-            alert("El correo electrónico introducido no es correcto");
+        $("#divCorreo").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divCorreo").removeClass().addClass("form-group has-success");
             return false;
     }
 
@@ -66,6 +72,12 @@ function validacion() {
             alert("Por favor selecciona un estado");  
             return false;
     }
-})   
+
+    indice = $("condicones").selectedIndex;
+    if($("#condciones optiion:selected").val() == ""){
+            alert("Debes aceptar las condiones");
+            return false;
+    }
+   
     
 }
