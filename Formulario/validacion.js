@@ -6,22 +6,22 @@ $(document).ready(function(){
 
 function validacion() {
 
+    boolean valida == true;
+
     valor = $("#nombre").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
         $("#divNombre").removeClass().addClass("form-group has-error");
     }else{
         $("#divNombre").removeClass().addClass("form-group has-success");
-        return false;
+        valida = false;
     }
         
-    
-
     valor = $("#apellido").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
         $("#divApellido").removeClass().addClass("form-group has-error");
     }else{
         $("#divApellido").removeClass().addClass("form-group has-success");
-        return false;
+        valida = false;
     }
 
     valor = $("#telefono").val();
@@ -29,7 +29,8 @@ function validacion() {
         $("#divTelefono").removeClass().addClass("form-group has-error");
     }else{
         $("#divTelefono").removeClass().addClass("form-group has-success");
-        return false;
+        valida = false;
+
     }
 
 
@@ -38,7 +39,7 @@ function validacion() {
         $("#divCorreo").removeClass().addClass("form-group has-error");
     }else{
         $("#divCorreo").removeClass().addClass("form-group has-success");
-            return false;
+        valida = false;
     }
 
     valor = $("direccion").val();
@@ -74,10 +75,12 @@ function validacion() {
     }
 
     indice = $("condicones").selectedIndex;
-    if($("#condciones optiion:selected").val() == ""){
+    if($("#condciones option:selected").val() == ""){
             alert("Debes aceptar las condiones");
             return false;
     }
+
+    return valida;
    
     
 }
