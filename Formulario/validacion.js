@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function validacion() {
 
-    boolean valida = true;
+    var valida = true;
 
     valor = $("#nombre").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
@@ -44,15 +44,19 @@ function validacion() {
 
     valor = $("direccion").val();
     if($("#direccion").val().length < 1) {  
-            alert("La direccion es obligatoria, por favor introducela e intentalo de nuevo");  
-            return false; 
+        $("#divDireccion").removeClass().addClass("form-group has-error"); 
+    }else{
+        $("#divDireccion").removeClass().addClass("form-group has-success");
+        valida = false;
     }
 
 
-    valor = $("#ciudad").val();
-    if($("#ciudad").val().length < 1) {  
-            alert("La localidad es obligatoria");  
-            return false; 
+    valor = $("#localidad").val();
+    if($("#localidad").val().length < 1) {  
+        $("#divLocalidad").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divLocalidad").removeClass().addClass("form-group has-success");
+        valida = false;
     }
 
     valor = $("#codigo").val();
