@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function validacion() {
 
-    boolean valida == true;
+    boolean valida = true;
 
     valor = $("#nombre").val();
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
