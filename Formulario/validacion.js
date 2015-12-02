@@ -69,7 +69,7 @@ function validacion() {
 
 
     indice = $("#provincia").selectedIndex;
-    if($("#provincia !option:selected").val() == "") {  
+    if($("#provincia option:selected").val() == "") {  
         $("#divProvincia").removeClass().addClass("form-group has-error");
     }else{
         $("#divProvincia").removeClass().addClass("form-group has-success");
