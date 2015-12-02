@@ -20,23 +20,23 @@
         <input type="tel" name="telefono" class="form-control" id="telefono" placeholder="Telefono">
     </div>
     <div class="form-group" id="divCorreo">
-        <label for="correo">Correo Eléctronico</label>
+        <label class ="control-label" for="correo">Correo Eléctronico</label>
         <input type="text" name="correo" class="form-control" id="correo" placeholder="Email">
     </div>
     <div class="form-group" id="divDireccion">
-        <label for="direccion">Dirección</label>
+        <label class = "control-label" for="direccion">Dirección</label>
         <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Direccion">
     </div>
     <div class="form-group" id="divLocalidad">
-        <label for="localidad">Localidad</label>
+        <label  class="control-label" for="localidad">Localidad</label>
         <input type="text" name="localidad" class="form-control" id="localidad" placeholder="Localidad">
     </div>
     <div class="form-group" id="divCodigo">
-        <label for="codigo">Código Postal</label>
+        <label class="control-label" for="codigo">Código Postal</label>
         <input type="text" name="codigo" class="form-control" id="codigo" placeholder="Codigo">
     </div>  
-    <div>  
-        <label for="provincia" id="divProvincia">Provincia</label>
+    <div class="form-group" id="divProvincia">  
+        <label class="control-label" for="provincia">Provincia</label>
         <select class="form-control" name="Provincia" id="provincia" >
             <option value="">- Selecciona una provincia -</option>
             <option value="alava">Alava</option>
@@ -48,8 +48,8 @@
             <option value="burgos">Burgos</option>
         </select>
     </div>
-    <div>
-        <label for="estado" id="divEstado">Estado Civil</label>
+    <div class="form-group" id="divEstado">
+        <label class="control-label" for="estado">Estado Civil</label>
         <select class="form-control"name="Estado civil" id="estado">
             <option value="">-Selecciona un estado -</option>
             <option value="soltero">Soltero</option>
@@ -81,9 +81,9 @@
         </label>
     </div>
     
-    <div>
+    <div class="checkbox" id="divHobbies">
         <label>Hobbies</label>
-        <label class="checkbox-inline" id="divHobbies">
+        <label class="checkbox-inline">
             <input type="checkbox" name="hobbies" value="cine" id="cine">Cine
         </label>
         <label class="checkbox-inline">
@@ -110,8 +110,8 @@
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
     </div>
-    <div>
-        <label class="checbox-inline" id="divCondiciones">
+    <div class="form-group" id="divCondiciones">
+        <label class="checbox-inline" for="condiciones">
             <input type="checkbox" name="condiciones" value="condiciones" id="condiciones">He leído y acepto las condiciones
         </label>
 </form>

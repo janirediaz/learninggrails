@@ -33,8 +33,6 @@ function validacion() {
 
     }
 
-
-    valor = $("#correo").val();
     if($("#correo").val().indexOf('@', 0) == -1 || $("#correo").val().indexOf('.', 0) == -1) {
         $("#divCorreo").removeClass().addClass("form-group has-error");
     }else{
@@ -42,7 +40,6 @@ function validacion() {
         valida = false;
     }
 
-    valor = $("direccion").val();
     if($("#direccion").val().length < 1) {  
         $("#divDireccion").removeClass().addClass("form-group has-error"); 
     }else{
@@ -50,8 +47,6 @@ function validacion() {
         valida = false;
     }
 
-
-    valor = $("#localidad").val();
     if($("#localidad").val().length < 1) {  
         $("#divLocalidad").removeClass().addClass("form-group has-error");
     }else{
@@ -59,7 +54,6 @@ function validacion() {
         valida = false;
     }
 
-    valor = $("#codigo").val();
     if($("#codigo").val().length < 5) {  
         $("#divCodigo").removeClass().addClass("form-group has-error");
     }else{
@@ -68,16 +62,14 @@ function validacion() {
     }  
 
 
-    indice = $("#provincia").selectedIndex;
-    if($("#provincia option:selected").val() == "") {  
+    if($("#provincia").val() == "") {  
         $("#divProvincia").removeClass().addClass("form-group has-error");
     }else{
         $("#divProvincia").removeClass().addClass("form-group has-success");
         valida = false;
     }
 
-    indice = $("#estado").selectedIndex;
-    if($("#estado option:selected").val() == "") {  
+    if($("#estado").val() == "") {  
         $("#divEstado").removeClass().addClass("form-group has-error");
     }else{
         $("#divEstado").removeClass().addClass("form-group has-success");
