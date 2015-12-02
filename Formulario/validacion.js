@@ -61,21 +61,27 @@ function validacion() {
 
     valor = $("#codigo").val();
     if($("#codigo").val().length < 5) {  
-            alert("El codigo postal debe tener 5 digitos");  
-            return false;  
-        }  
+        $("#divCodigo").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divCodigo").removeClass().addClass("form-group has-success");
+        valida = false;
+    }  
 
 
     indice = $("#provincia").selectedIndex;
-    if($("#provincia option:selected").val() == "") {  
-            alert("La provincia es obligatoria");  
-            return false;
+    if($("#provincia !option:selected").val() == "") {  
+        $("#divProvincia").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divProvincia").removeClass().addClass("form-group has-success");
+        valida = false;
     }
 
     indice = $("#estado").selectedIndex;
     if($("#estado option:selected").val() == "") {  
-            alert("Por favor selecciona un estado");  
-            return false;
+        $("#divEstado").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divEstado").removeClass().addClass("form-group has-success");
+        valida = false;
     }
 
     indice = $("condicones").selectedIndex;
