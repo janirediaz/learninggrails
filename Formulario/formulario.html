@@ -58,6 +58,7 @@
             <option value="otro">Otro</option>
         </select>
     </div>
+
    <div>
         <label>Sexo</label>
         <label class="radio-inline" id="divSexo">
@@ -71,13 +72,13 @@
     <div>
         <label>Edad</label>
         <label class="radio-inline" id="divEdad">
-            <input type="radio" name="edad" value="menor" id="menor">menor de 18
+            <input type="radio" name="edad" value="menor" id="edad">menor de 18
         </label>
         <label class="radio-inline">
-            <input type="radio" name="edad" value="adulto" id="adulto">entre 19 y 60
+            <input type="radio" name="edad" value="adulto" id="edad">entre 19 y 60
         </label>
         <label class="radio-inline">
-            <input type="radio" name="edad" value="mayor" id="mayor">mayor de 61
+            <input type="radio" name="edad" value="mayor" id="edad">mayor de 61
         </label>
     </div>
     
@@ -99,14 +100,25 @@
             <input type="checkbox" name="hobbies" value="otros" id="otros">Otros
         </label>
     </div>
+    <div class="form-group" id="divSeries">
+        <label class="control-label" for="series">Series: Selecciona una o varias series que te gusten</label>
+        <select class="form-control"name="Series" id="series" multiple="multiple">
+            <option> The walking dead</option>
+            <option selected="selected">Juego de tronos</option>
+            <option>Castle</option>
+            <option selected="selected">Bones</option>
+            <option>The big bang theory</option>
+            <option selected="selected">Friends</option>
+        </select>
+    </div>
     <h3>Datos de usuario</h3>
    <div class="form-group" id="divUser">
-        <label for="user">Nombre de Usuario</label>
+        <label class="control-label" for="user">Nombre de Usuario</label>
         <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario">
     </div>
     <div class="form-group" id="divPass">
-        <label for="pass">Contraseña</label>
-        <input type="password" name="pass" id="pass">
+        <label class="control-label" for="pass">Contraseña</label>
+        <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña">
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
     </div>

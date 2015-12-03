@@ -76,10 +76,37 @@ function validacion() {
         valida = false;
     }
 
+    if(!$("input[name=sexo]:checked").val(){
+        alert("Por favor selecciona tu sexo");
+    }
+
+    if($("#edad").is(':checked')){
+        $("#divEdad").removeClass().addClass("radio-inline has-error");
+    }else{
+        $("#divEdad").removeClass().addClass("radio-inline has-success");
+        valida = false;
+    }
+
     indice = $("condicones").selectedIndex;
     if($("#condciones option:selected").val() == ""){
             alert("Debes aceptar las condiones");
             return false;
+    }
+
+    valor = $("#usuario").val();
+    if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
+        $("#divUser").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divUser").removeClass().addClass("form-group has-success");
+        valida = false;
+    }
+
+    valor = $("#pass").val();
+    if (valor == null || valor.length == 0 || /^\s+$/.test(valor)) {
+        $("#divPass").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divPass").removeClass().addClass("form-group has-success");
+        valida = false;
     }
 
     return valida;
