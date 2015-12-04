@@ -76,21 +76,32 @@ function validacion() {
         valida = false;
     }
 
-    if(!$("input[name=sexo]:checked").val(){
-        alert("Por favor selecciona tu sexo");
-    }
-
-    if($("#edad").is(':checked')){
-        $("#divEdad").removeClass().addClass("radio-inline has-error");
+    if($("#sexo").val() == "") {  
+        $("#divSexo").removeClass().addClass("form-group has-error");
     }else{
-        $("#divEdad").removeClass().addClass("radio-inline has-success");
+        $("#divSexo").removeClass().addClass("form-group has-success");
         valida = false;
     }
 
-    indice = $("condicones").selectedIndex;
-    if($("#condciones option:selected").val() == ""){
-            alert("Debes aceptar las condiones");
-            return false;
+    if($("#edad").val() == "") {  
+        $("#divEdad").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divEdad").removeClass().addClass("form-group has-success");
+        valida = false;
+    }
+
+    if($("#hobbies").val() == "") {  
+        $("#divHobbies").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divHobbies").removeClass().addClass("form-group has-success");
+        valida = false;
+    }
+
+    if($("#series").val() == "") {  
+        $("#divSeries").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divSeries").removeClass().addClass("form-group has-success");
+        valida = false;
     }
 
     valor = $("#usuario").val();
@@ -107,6 +118,12 @@ function validacion() {
     }else{
         $("#divPass").removeClass().addClass("form-group has-success");
         valida = false;
+    }
+
+    if(!$("#condiciones").is(':checked')) {  
+        alert("Por favor acepta las condicones");
+    }else{
+        alert("Has aceptado las condiciones");
     }
 
     return valida;
