@@ -1,9 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Hector
-  Date: 09/12/2015
-  Time: 15:48
---%>
+
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -11,13 +6,14 @@
     <title>Lista Usuarios</title>
 </head>
 
-<body>
+<br>
 <g:each in="${listaUsuarios}" var="usuario">
-    <p>Usuario${usuario.nombre} ${usuario.apellido} ${usuario.edad}</p>
-    <a href="http://localhost8080/user/delete?id=${usuario.id}">Borrar usuario</a>
+    <p>Usuario: ${usuario.nombre} ${usuario.apellido} Edad: ${usuario.edad}</p>
+    <a href="http://localhost:8080/user/delete?id=${usuario.id}">Borrar usuario</a>
+    <a href="http://localhost:8080/user/getUser?id=${usuario.id}">Detalle de Usuario</a>
 </g:each>
 
-<a href="http://localhost8080/user">Ir al index</a>
+<br><a href="http://localhost:8080/user">Index</a></br>
 
 
 </body>

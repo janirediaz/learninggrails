@@ -3,9 +3,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Formulario de resgistro</title>
 </head>
-<br>
+
 <h3>Formulario de registro</h3>
-<br action="http://localhost:8080/user/saveUser" method="get">
+<form action="http://localhost:8080/user/saveUser" method="get">
     Nombre:<br><input type="text" name="nombre"></br>
     Apellido:<br><input type="text" name="apellido"></br>
     Edad:<br><input type="text" name="edad"></br>
@@ -14,7 +14,8 @@
     <input type="submit" value="Enviar">
 
 </form>
-<a href="http://localhost:8080/user/lista">Lista usuarios</a>
+<a href="http://localhost:8080/user/lista">Lista Usuarios</a>
+<a href="http://localhost:8080/user/login">Login</a>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
