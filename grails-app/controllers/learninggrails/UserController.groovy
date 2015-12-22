@@ -44,23 +44,25 @@ class UserController {
     }
 
     def login(){
-        /*def user = User.get(params.user, params.password);
+        def user = User.get(params.id);
+        user.user = params.user;
+        user.password = params.password;
         if(user){
             session.user = user;
             redirect(controller: 'user', action: 'lista');
         }else{
             redirect(controller: 'user', action: 'login');
         }
-        */
 
-        if(params.user == "admin" && params.password == "pass"){
+
+        /*if(params.user == "admin" && params.password == "pass"){
             println("login succeed");
             session.user = "admin";
         }else{
             println("login failed");
 
         }
-
+        */
 
 
 
